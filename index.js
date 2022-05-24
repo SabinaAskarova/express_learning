@@ -15,7 +15,30 @@ const emp=[
     {"id":3,"name":"employee 3","age":22}
 ]
 
+// app.get("/",(req,res)=>{
+//    res.status(200).send(emp);
+// })
+
+// Modul 5.  Dərs 3. request and response task
+
+const product=[
+    {"id":1,"name":"sugar","weight":10},
+    {"id":2,"name":"bread","weight":5},
+    {"id":3,"name":"oil","weight":20},
+    {"id":4,"name":"cheese","weight":20},
+    {"id":5,"name":"tea","weight":20}
+]
+
 app.get("/",(req,res)=>{
-   res.status(200).send(emp);
+   res.status(200).send(product);
 })
 
+app.get("/find/:id",(req,res)=>{
+    const id=parseInt(req.params.id);
+    const myproduct=product.find(el=>el.id==id);
+
+    if(myproduct){
+        res.status(202).send(myproduct)
+    }
+    res.status(400).send('No product');
+})
