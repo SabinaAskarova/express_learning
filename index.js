@@ -14,6 +14,7 @@ const emp=[
     {"id":2,"name":"employee 2","age":21},
     {"id":3,"name":"employee 3","age":22}
 ]
+
 app.get("/",(req,res)=>{
    res.status(200).send(emp);
 })
