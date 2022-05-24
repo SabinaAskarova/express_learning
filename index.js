@@ -15,9 +15,9 @@ const emp=[
     {"id":3,"name":"employee 3","age":22}
 ]
 
-// app.get("/",(req,res)=>{
-//    res.status(200).send(emp);
-// })
+ app.get("/",(req,res)=>{
+    res.status(200).send(emp);
+ })
 
 // Modul 5.  Dərs 3. request and response task
 
